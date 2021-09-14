@@ -41,7 +41,7 @@ class _FilterState extends State<Filter> {
         body: Column(
           children: [
             SizedBox(
-              height: height * 0.08,
+              height: height * 0.055,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -70,7 +70,7 @@ class _FilterState extends State<Filter> {
                     style: TextStyle(
                         color: Color(0xFF222455),
                         fontFamily: "JosefinSans",
-                        fontSize: 25,
+                        fontSize: 22,
                         fontWeight: FontWeight.bold),
                   ),
                 ),
@@ -89,7 +89,7 @@ class _FilterState extends State<Filter> {
               ],
             ),
             SizedBox(
-              height: height * 0.05,
+              height: height * 0.03,
             ),
             Center(
               child: Text(
@@ -97,7 +97,7 @@ class _FilterState extends State<Filter> {
                 style: TextStyle(
                   fontFamily: "JosefinSans",
                     color: Color(0xFF3E3F68),
-                    fontSize: 25,
+                    fontSize: 22,
                     fontWeight: FontWeight.bold),
               ),
             ),
@@ -825,10 +825,10 @@ class _FilterState extends State<Filter> {
               color: Color(0xFF5663FF),
               boxShadow: [
                 BoxShadow(
-                    color: Colors.black38, spreadRadius: 0, blurRadius: 3),
+                    color: Colors.black38, spreadRadius: 0, blurRadius: 0),
               ],
             ),
-            height: height * 0.095,
+            height: height * 0.08,
             child: ClipRRect(
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(30.0),
@@ -847,13 +847,13 @@ class _FilterState extends State<Filter> {
                         style: TextStyle(
                             color: Color(0xFFFFFFFF),
                           fontFamily: "JosefinSans",
-                            fontSize: 22,
+                            fontSize: 20,
                             fontWeight: FontWeight.bold),
                       ),
                     ),SizedBox(
                       width: width * 0.2,
                     ),
-                    Container(height: height * 0.095, child: VerticalDivider(color: Colors.white)),
+                    Container(height: height * 0.08, child: VerticalDivider(color: Colors.white)),
                     SizedBox(
                       width: width * 0.2,
                     ),
@@ -864,7 +864,7 @@ class _FilterState extends State<Filter> {
                         style: TextStyle(
                           color: Color(0xFFFFFFFF),
                           fontFamily: "JosefinSans",
-                            fontSize: 22,
+                            fontSize: 20,
                             fontWeight: FontWeight.bold),
                       ),
                     ),

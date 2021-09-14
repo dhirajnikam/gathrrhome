@@ -26,7 +26,7 @@ class _HomeState extends State<Home> {
           body: Column(
             children: [
               SizedBox(
-                height: height * 0.075,
+                height: height * 0.055,
               ),
               Center(
                 child: Container(
@@ -44,7 +44,7 @@ class _HomeState extends State<Home> {
                   child: TextField(
                     decoration: InputDecoration(
                       hintStyle: TextStyle(
-                          fontSize: 22,
+                          fontSize: 20,
                           color: Color(0xFF6E7FAA),
                           fontFamily: "JosefinSans"),
                       hintText: 'Find Events',
@@ -58,7 +58,7 @@ class _HomeState extends State<Home> {
                         child: Image(image: AssetImage('assets/Group 236.png')),
                       ),
                       border: InputBorder.none,
-                      contentPadding: EdgeInsets.all(20),
+                      contentPadding: EdgeInsets.only(top: 20),
                     ),
                   ),
                 ),
@@ -74,7 +74,7 @@ class _HomeState extends State<Home> {
                     Text(
                       "Trending Events",
                       style: TextStyle(
-                          fontSize: 25,
+                          fontSize: 22,
                           fontWeight: FontWeight.bold,
                           fontFamily: "JosefinSans",
                           color: Color(0xFF222455)),
@@ -101,7 +101,7 @@ class _HomeState extends State<Home> {
               ),
               Container(
                   // margin: EdgeInsets.symmetric(vertical: 10.0),
-                  height: height * 0.35,
+                  height: height * 0.33,
                   // width: width * 0.2,
 
                   child: ListView(scrollDirection: Axis.horizontal, children: <
@@ -122,11 +122,12 @@ class _HomeState extends State<Home> {
                                       image: AssetImage('assets/cover.jpg'),
                                       fit: BoxFit.fill,
                                       width: width * 0.87,
-                                      height: height * 0.25,
-                                    )),
+                                      height: height * 0.24,
+                                    )
+                                    ),
                                 Container(
                                   width: width * 0.87,
-                                  height: height * 0.25,
+                                  height: height * 0.24,
                                   //alignment: Alignment.center,
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
@@ -135,21 +136,21 @@ class _HomeState extends State<Home> {
                                         'FREE NYC',
                                         style: TextStyle(
                                             color: Color(0xFF00ffff),
-                                            fontSize: 45,
+                                            fontSize: 35,
                                             fontWeight: FontWeight.bold),
                                       ),
                                       Text(
                                         'NETWORKING',
                                         style: TextStyle(
                                             color: Color(0xFF00ffff),
-                                            fontSize: 45,
+                                            fontSize: 35,
                                             fontWeight: FontWeight.bold),
                                       ),
                                       Text(
                                         'EVENT',
                                         style: TextStyle(
                                             color: Color(0xFF00ffff),
-                                            fontSize: 45,
+                                            fontSize: 35,
                                             fontWeight: FontWeight.bold),
                                       ),
                                       SizedBox(
@@ -170,7 +171,7 @@ class _HomeState extends State<Home> {
                                       ),
                                       Container(
                                         alignment: Alignment.center,
-                                        height: height * 0.025,
+                                        height: height * 0.029,
                                         width: width * 0.12,
                                         color: Colors.white,
                                         child: Text(
@@ -187,10 +188,13 @@ class _HomeState extends State<Home> {
                                         width: width * 0.5,
                                       ),
                                       Container(
-                                        height: height * 0.025,
+                                        alignment: Alignment.center,
+                                        height: height * 0.029,
                                         width: width * 0.12,
                                         color: Colors.white,
                                         child: Row(
+                                          //mainAxisAlignment:MainAxisAlignment.center,
+                                          crossAxisAlignment: CrossAxisAlignment.center,
                                           children: [
                                             Icon(
                                               Icons.star,
@@ -210,7 +214,7 @@ class _HomeState extends State<Home> {
                             ),
                             Container(
                               width: width * 0.87,
-                              height: height * 0.05,
+                              height: height * 0.03,
                               child: Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceAround,
@@ -219,7 +223,7 @@ class _HomeState extends State<Home> {
                                       "Pune Meetup",
                                       style: TextStyle(
                                           color: Color(0xFF3E3F68),
-                                          fontSize: 25,
+                                          fontSize: 20,
                                           fontWeight: FontWeight.bold,
                                           fontFamily: "JosefinSans"),
                                     ),
@@ -230,7 +234,7 @@ class _HomeState extends State<Home> {
                                       alignment: Alignment.center,
                                       child: Text(
                                         "Italian",
-                                        style: TextStyle(color: Colors.white),
+                                        style: TextStyle(color: Colors.white,fontFamily: "JosefinSans"),
                                       ),
                                       height: height * 0.025,
                                       width: width * 0.12,
@@ -254,7 +258,7 @@ class _HomeState extends State<Home> {
                                       alignment: Alignment.center,
                                       child: Text(
                                         "1.2km",
-                                        style: TextStyle(color: Colors.white),
+                                        style: TextStyle(color: Colors.white,fontFamily: "JosefinSans"),
                                       ),
                                       height: height * 0.025,
                                       width: width * 0.12,
@@ -269,28 +273,27 @@ class _HomeState extends State<Home> {
                                     ),
                                     Container(
                                         //height: height*0.1,
-                                        width: width * 0.2,
+                                        width: width * 0.17,
                                         child: Image(
                                           image:
                                               AssetImage('assets/friends.png'),
                                         ))
                                   ]),
                             ),
-                            Center(
-                              child: Container(
-                                width: width * 0.87,
-                                child: Text(
-                                  "Bhau Institute, Shivajinagar, Pune",
-                                  style: TextStyle(
-                                      fontSize: 15, color: Color(0xFF8A98BA)),
-                                ),
+                            
+                            Container(
+                              width: width * 0.87,
+                              child: Text(
+                                "Bhau Institute, Shivajinagar, Pune",
+                                style: TextStyle(
+                                    fontSize: 15, color: Color(0xFF8A98BA)),
                               ),
                             )
                           ],
                         ),
                       ),
                     ),
-                    Padding(
+                Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Card(
                         elevation: 5,
@@ -306,11 +309,12 @@ class _HomeState extends State<Home> {
                                       image: AssetImage('assets/cover.jpg'),
                                       fit: BoxFit.fill,
                                       width: width * 0.87,
-                                      height: height * 0.25,
-                                    )),
+                                      height: height * 0.24,
+                                    )
+                                    ),
                                 Container(
                                   width: width * 0.87,
-                                  height: height * 0.25,
+                                  height: height * 0.24,
                                   //alignment: Alignment.center,
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
@@ -319,21 +323,21 @@ class _HomeState extends State<Home> {
                                         'FREE NYC',
                                         style: TextStyle(
                                             color: Color(0xFF00ffff),
-                                            fontSize: 45,
+                                            fontSize: 35,
                                             fontWeight: FontWeight.bold),
                                       ),
                                       Text(
                                         'NETWORKING',
                                         style: TextStyle(
                                             color: Color(0xFF00ffff),
-                                            fontSize: 45,
+                                            fontSize: 35,
                                             fontWeight: FontWeight.bold),
                                       ),
                                       Text(
                                         'EVENT',
                                         style: TextStyle(
                                             color: Color(0xFF00ffff),
-                                            fontSize: 45,
+                                            fontSize: 35,
                                             fontWeight: FontWeight.bold),
                                       ),
                                       SizedBox(
@@ -354,7 +358,7 @@ class _HomeState extends State<Home> {
                                       ),
                                       Container(
                                         alignment: Alignment.center,
-                                        height: height * 0.025,
+                                        height: height * 0.029,
                                         width: width * 0.12,
                                         color: Colors.white,
                                         child: Text(
@@ -371,10 +375,13 @@ class _HomeState extends State<Home> {
                                         width: width * 0.5,
                                       ),
                                       Container(
-                                        height: height * 0.025,
+                                        alignment: Alignment.center,
+                                        height: height * 0.029,
                                         width: width * 0.12,
                                         color: Colors.white,
                                         child: Row(
+                                          //mainAxisAlignment:MainAxisAlignment.center,
+                                          crossAxisAlignment: CrossAxisAlignment.center,
                                           children: [
                                             Icon(
                                               Icons.star,
@@ -394,7 +401,7 @@ class _HomeState extends State<Home> {
                             ),
                             Container(
                               width: width * 0.87,
-                              height: height * 0.05,
+                              height: height * 0.03,
                               child: Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceAround,
@@ -403,7 +410,7 @@ class _HomeState extends State<Home> {
                                       "Pune Meetup",
                                       style: TextStyle(
                                           color: Color(0xFF3E3F68),
-                                          fontSize: 25,
+                                          fontSize: 20,
                                           fontWeight: FontWeight.bold,
                                           fontFamily: "JosefinSans"),
                                     ),
@@ -414,7 +421,7 @@ class _HomeState extends State<Home> {
                                       alignment: Alignment.center,
                                       child: Text(
                                         "Italian",
-                                        style: TextStyle(color: Colors.white),
+                                        style: TextStyle(color: Colors.white,fontFamily: "JosefinSans"),
                                       ),
                                       height: height * 0.025,
                                       width: width * 0.12,
@@ -438,7 +445,7 @@ class _HomeState extends State<Home> {
                                       alignment: Alignment.center,
                                       child: Text(
                                         "1.2km",
-                                        style: TextStyle(color: Colors.white),
+                                        style: TextStyle(color: Colors.white,fontFamily: "JosefinSans"),
                                       ),
                                       height: height * 0.025,
                                       width: width * 0.12,
@@ -453,27 +460,31 @@ class _HomeState extends State<Home> {
                                     ),
                                     Container(
                                         //height: height*0.1,
-                                        width: width * 0.2,
+                                        width: width * 0.17,
                                         child: Image(
                                           image:
                                               AssetImage('assets/friends.png'),
                                         ))
                                   ]),
                             ),
-                            Center(
-                              child: Container(
-                                width: width * 0.87,
-                                child: Text(
-                                  "Bhau Institute, Shivajinagar, Pune",
-                                  style: TextStyle(
-                                      fontSize: 15, color: Color(0xFF8A98BA)),
-                                ),
+                            
+                            Container(
+                              width: width * 0.87,
+                              child: Text(
+                                "Bhau Institute, Shivajinagar, Pune",
+                                style: TextStyle(
+                                    fontSize: 15, color: Color(0xFF8A98BA)),
                               ),
                             )
                           ],
                         ),
                       ),
                     ),
+                
+                      
+                            
+                           
+                      
                   ])),
               SizedBox(
                 height: height * 0.01,
@@ -486,7 +497,7 @@ class _HomeState extends State<Home> {
                     Text(
                       "Category",
                       style: TextStyle(
-                          fontSize: 25,
+                          fontSize: 22,
                           fontWeight: FontWeight.bold,
                           color: Color(0xFF3E3F68),
                           fontFamily: "JosefinSans"),
@@ -502,7 +513,7 @@ class _HomeState extends State<Home> {
                 ),
               ),
               Container(
-                  height: height * 0.15,
+                  height: height * 0.16,
                   child: ListView(scrollDirection: Axis.horizontal, children: <
                       Widget>[
                     Padding(
@@ -510,7 +521,7 @@ class _HomeState extends State<Home> {
                       child: Stack(
                         children: [
                           Container(
-                            width: width * 0.29,
+                            width: width * 0.28,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
                               // gradient: LinearGradient(colors: [Colors.lightBlueAccent.withOpacity(0.1),Colors.indigo.withOpacity(0.1)]),
@@ -521,7 +532,7 @@ class _HomeState extends State<Home> {
                           ),
                           Positioned.fill(
                               child: Container(
-                            width: width * 0.29,
+                            width: width * 0.28,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
                               gradient: LinearGradient(
@@ -538,12 +549,12 @@ class _HomeState extends State<Home> {
                             top: height * 0.05,
                             bottom: 0.0,
                             right: 0.0,
-                            left: width * 0.045,
+                            left: width * 0.035,
                             child: Container(
                               child: Text("Meetup",
                                   style: TextStyle(
                                       color: Colors.white,
-                                      fontSize: 25,
+                                      fontSize: 22,
                                       fontWeight: FontWeight.bold,
                                       fontFamily: "JosefinSans")),
                             ),
@@ -551,12 +562,13 @@ class _HomeState extends State<Home> {
                         ],
                       ),
                     ),
+                  
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Stack(
                         children: [
                           Container(
-                              width: width * 0.29,
+                              width: width * 0.28,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
                                 image: new DecorationImage(
@@ -567,7 +579,7 @@ class _HomeState extends State<Home> {
                               )),
                           Positioned.fill(
                               child: Container(
-                            width: width * 0.29,
+                            width: width * 0.26,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
                               gradient: LinearGradient(
@@ -584,12 +596,12 @@ class _HomeState extends State<Home> {
                             top: height * 0.05,
                             bottom: 0.0,
                             right: 0.0,
-                            left: width * 0.045,
+                            left: width * 0.035,
                             child: Container(
                               child: Text("StartUp",
                                   style: TextStyle(
                                       color: Colors.white,
-                                      fontSize: 25,
+                                      fontSize: 22,
                                       fontWeight: FontWeight.bold,
                                       fontFamily: "JosefinSans")),
                             ),
@@ -597,12 +609,13 @@ class _HomeState extends State<Home> {
                         ],
                       ),
                     ),
+                    
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Stack(
                         children: [
                           Container(
-                            width: width * 0.29,
+                            width: width * 0.28,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
                               image: new DecorationImage(
@@ -615,7 +628,7 @@ class _HomeState extends State<Home> {
                           ),
                           Positioned.fill(
                               child: Container(
-                            width: width * 0.29,
+                            width: width * 0.26,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
                               gradient: LinearGradient(
@@ -632,13 +645,13 @@ class _HomeState extends State<Home> {
                             top: height * 0.05,
                             bottom: 0.0,
                             right: 0.0,
-                            left: width * 0.045,
+                            left: width * 0.035,
                             child: Container(
                               child: Text(
                                 "College",
                                 style: TextStyle(
                                     color: Colors.white,
-                                    fontSize: 25,
+                                    fontSize: 22,
                                     fontWeight: FontWeight.bold,
                                     fontFamily: "JosefinSans"),
                               ),
@@ -659,7 +672,7 @@ class _HomeState extends State<Home> {
                     Text(
                       "My Network",
                       style: TextStyle(
-                          fontSize: 25,
+                          fontSize: 22,
                           fontWeight: FontWeight.bold,
                           color: Color(0xFF3E3F68),
                           fontFamily: "JosefinSans"),
@@ -680,75 +693,88 @@ class _HomeState extends State<Home> {
                   child: ListView(scrollDirection: Axis.horizontal, children: <
                       Widget>[
                     Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: const EdgeInsets.all(5.0),
                       child: Container(
                         child: CircleAvatar(
-                          radius: 30,
+                          radius: 25,
                           backgroundImage: AssetImage('assets/photo/p1.jpeg'),
                           backgroundColor: Colors.transparent,
                         ),
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: const EdgeInsets.all(5.0),
                       child: Container(
                         child: CircleAvatar(
-                          radius: 30,
+                          radius: 25,
                           backgroundImage: AssetImage('assets/photo/p2.jpeg'),
                           backgroundColor: Colors.transparent,
                         ),
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: const EdgeInsets.all(5.0),
                       child: Container(
                         child: CircleAvatar(
-                          radius: 30,
-                          backgroundImage: AssetImage('assets/photo/p3.jpg'),
-                          backgroundColor: Colors.transparent,
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        child: CircleAvatar(
-                          radius: 30,
+                          radius: 25,
                           backgroundImage: AssetImage('assets/photo/p1.jpeg'),
                           backgroundColor: Colors.transparent,
                         ),
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: const EdgeInsets.all(5.0),
                       child: Container(
                         child: CircleAvatar(
-                          radius: 30,
+                          radius: 25,
                           backgroundImage: AssetImage('assets/photo/p2.jpeg'),
                           backgroundColor: Colors.transparent,
                         ),
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: const EdgeInsets.all(5.0),
                       child: Container(
                         child: CircleAvatar(
-                          radius: 30,
-                          backgroundImage: AssetImage('assets/photo/p3.jpg'),
-                          backgroundColor: Colors.transparent,
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        child: CircleAvatar(
-                          radius: 30,
+                          radius: 25,
                           backgroundImage: AssetImage('assets/photo/p1.jpeg'),
                           backgroundColor: Colors.transparent,
                         ),
                       ),
                     ),
+                    Padding(
+                      padding: const EdgeInsets.all(5.0),
+                      child: Container(
+                        child: CircleAvatar(
+                          radius: 25,
+                          backgroundImage: AssetImage('assets/photo/p2.jpeg'),
+                          backgroundColor: Colors.transparent,
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(5.0),
+                      child: Container(
+                        child: CircleAvatar(
+                          radius: 25,
+                          backgroundImage: AssetImage('assets/photo/p1.jpeg'),
+                          backgroundColor: Colors.transparent,
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(5.0),
+                      child: Container(
+                        child: CircleAvatar(
+                          radius: 25,
+                          backgroundImage: AssetImage('assets/photo/p2.jpeg'),
+                          backgroundColor: Colors.transparent,
+                        ),
+                      ),
+                    ),
+                      
+                     
+                    
                   ]))
             ],
           ),
@@ -760,7 +786,7 @@ class _HomeState extends State<Home> {
                 color: Colors.white,
                 boxShadow: [
                   BoxShadow(
-                      color: Color(0xFF3E3F68), spreadRadius: 0, blurRadius: 1),
+                      color: Color(0xFF3E3F68), spreadRadius: 0, blurRadius: 0),
                 ],
               ),
               height: height * 0.09,
@@ -776,7 +802,7 @@ class _HomeState extends State<Home> {
                   children: <Widget>[
                     IconButton(
                       icon: Padding(
-                        padding: const EdgeInsets.all(2.0),
+                        padding: const EdgeInsets.all(5.0),
                         child:
                             Image(image: AssetImage('assets/icon/home.png')),
                       ),
@@ -784,7 +810,7 @@ class _HomeState extends State<Home> {
                     ),
                     IconButton(
                       icon: Padding(
-                        padding: const EdgeInsets.all(2.0),
+                        padding: const EdgeInsets.all(5.0),
                         child:
                             Image(image: AssetImage('assets/icon/book.png')),
                       ),
@@ -803,7 +829,7 @@ class _HomeState extends State<Home> {
                     ),
                     IconButton(
                       icon: Padding(
-                        padding: const EdgeInsets.all(2.0),
+                        padding: const EdgeInsets.all(5.0),
                         child:
                             Image(image: AssetImage('assets/icon/ring.png')),
                       ),
@@ -811,7 +837,7 @@ class _HomeState extends State<Home> {
                     ),
                     IconButton(
                       icon: Padding(
-                        padding: const EdgeInsets.all(2.0),
+                        padding: const EdgeInsets.all(5.0),
                         child:
                             Image(image: AssetImage('assets/icon/person.png')),
                       ),
