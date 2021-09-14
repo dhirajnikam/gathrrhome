@@ -50,11 +50,11 @@ class _HomeState extends State<Home> {
                       hintText: 'Find Events',
                       hintTextDirection: TextDirection.ltr,
                       prefixIcon: Padding(
-                        padding: const EdgeInsets.all(20.0),
+                        padding: const EdgeInsets.all(18.0),
                         child: Image(image: AssetImage('assets/Path 78.png')),
                       ),
                       suffixIcon: Padding(
-                        padding: const EdgeInsets.all(20.0),
+                        padding: const EdgeInsets.all(18.0),
                         child: Image(image: AssetImage('assets/Group 236.png')),
                       ),
                       border: InputBorder.none,
@@ -239,8 +239,9 @@ class _HomeState extends State<Home> {
                                             BorderRadius.circular(22.0),
                                         gradient: LinearGradient(
                                           colors: [
+                                            Color(0xFFFF8C48),
                                             Color(0xFFFF5673),
-                                            Color(0xFFFF8C48)
+                                            
                                           ],
                                           //stops: [0.0, 1.0],
                                         ),
@@ -289,14 +290,12 @@ class _HomeState extends State<Home> {
                         ),
                       ),
                     ),
-
-Padding(
+                    Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Card(
                         elevation: 5,
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(5)),
-                          
                         child: Column(
                           children: [
                             Stack(
@@ -424,8 +423,9 @@ Padding(
                                             BorderRadius.circular(22.0),
                                         gradient: LinearGradient(
                                           colors: [
+                                            Color(0xFFFF8C48),
                                             Color(0xFFFF5673),
-                                            Color(0xFFFF8C48)
+                                            
                                           ],
                                           //stops: [0.0, 1.0],
                                         ),
@@ -485,13 +485,18 @@ Padding(
                   children: [
                     Text(
                       "Category",
-                      style:
-                          TextStyle(fontSize: 25, fontWeight: FontWeight.bold,color: Color(0xFF3E3F68),fontFamily: "JosefinSans"),
+                      style: TextStyle(
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xFF3E3F68),
+                          fontFamily: "JosefinSans"),
                     ),
                     Text(
                       "See all (9)",
                       style: TextStyle(
-                          color: Color(0xFF6E7FAA), fontSize: 15,fontFamily: "JosefinSans"),
+                          color: Color(0xFF6E7FAA),
+                          fontSize: 15,
+                          fontFamily: "JosefinSans"),
                     )
                   ],
                 ),
@@ -537,11 +542,10 @@ Padding(
                             child: Container(
                               child: Text("Meetup",
                                   style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 25,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: "JosefinSans"
-                                  )),
+                                      color: Colors.white,
+                                      fontSize: 25,
+                                      fontWeight: FontWeight.bold,
+                                      fontFamily: "JosefinSans")),
                             ),
                           ),
                         ],
@@ -584,11 +588,10 @@ Padding(
                             child: Container(
                               child: Text("StartUp",
                                   style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 25,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: "JosefinSans"
-                                  )),
+                                      color: Colors.white,
+                                      fontSize: 25,
+                                      fontWeight: FontWeight.bold,
+                                      fontFamily: "JosefinSans")),
                             ),
                           ),
                         ],
@@ -631,14 +634,14 @@ Padding(
                             right: 0.0,
                             left: width * 0.045,
                             child: Container(
-                              child: Text("College",
-                                  style: TextStyle(
+                              child: Text(
+                                "College",
+                                style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 25,
                                     fontWeight: FontWeight.bold,
-                                    fontFamily: "JosefinSans"
-                                  ),
-                                  ),
+                                    fontFamily: "JosefinSans"),
+                              ),
                             ),
                           ),
                         ],
@@ -648,20 +651,25 @@ Padding(
               SizedBox(
                 height: height * 0.01,
               ),
-                            Padding(
+              Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
                       "My Network",
-                      style:
-                          TextStyle(fontSize: 25, fontWeight: FontWeight.bold,color: Color(0xFF3E3F68),fontFamily: "JosefinSans"),
+                      style: TextStyle(
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xFF3E3F68),
+                          fontFamily: "JosefinSans"),
                     ),
                     Text(
                       "See all (56)",
                       style: TextStyle(
-                          color: Color(0xFF6E7FAA), fontSize: 15,fontFamily: "JosefinSans"),
+                          color: Color(0xFF6E7FAA),
+                          fontSize: 15,
+                          fontFamily: "JosefinSans"),
                     )
                   ],
                 ),
@@ -767,39 +775,46 @@ Padding(
                   //crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
                     IconButton(
-                      iconSize: 30.0,
-                      padding: const EdgeInsets.all(8.0),
-                      icon: Icon(
-                        Icons.home,
-                        color: Color(0xFF5663FF),
+                      icon: Padding(
+                        padding: const EdgeInsets.all(2.0),
+                        child:
+                            Image(image: AssetImage('assets/icon/home.png')),
                       ),
                       onPressed: () {},
                     ),
                     IconButton(
-                      iconSize: 30.0,
-                      padding: const EdgeInsets.all(8.0),
-                      icon: Icon(Icons.bookmark_border_outlined,color: Color(0xFF6E7FAA),),
-                      onPressed: () {},
-                    ),
-                    IconButton(
-                      iconSize: 65.0,
-                      padding: const EdgeInsets.all(8.0),
-                      icon: Icon(
-                        Icons.add_circle,
-                        color: Color(0xFF5663FF),
+                      icon: Padding(
+                        padding: const EdgeInsets.all(2.0),
+                        child:
+                            Image(image: AssetImage('assets/icon/book.png')),
                       ),
                       onPressed: () {},
                     ),
                     IconButton(
-                      iconSize: 30.0,
-                      padding: const EdgeInsets.all(8.0),
-                      icon: Icon(Icons.notifications_outlined,color: Color(0xFF6E7FAA),),
+                      
+                      iconSize: 75,
+                     // splashColor: Color(0xFF5663FF),
+                      icon: Padding(
+                        padding: const EdgeInsets.only(bottom: 6),
+                        child:
+                            Image(image: AssetImage('assets/icon/circle.png')),
+                      ),
                       onPressed: () {},
                     ),
                     IconButton(
-                      iconSize: 30.0,
-                      padding: const EdgeInsets.all(8.0),
-                      icon: Icon(Icons.person_outline,color: Color(0xFF6E7FAA),),
+                      icon: Padding(
+                        padding: const EdgeInsets.all(2.0),
+                        child:
+                            Image(image: AssetImage('assets/icon/ring.png')),
+                      ),
+                      onPressed: () {},
+                    ),
+                    IconButton(
+                      icon: Padding(
+                        padding: const EdgeInsets.all(2.0),
+                        child:
+                            Image(image: AssetImage('assets/icon/person.png')),
+                      ),
                       onPressed: () {},
                     )
                   ],

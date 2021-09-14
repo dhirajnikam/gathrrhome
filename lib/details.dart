@@ -3,7 +3,7 @@ import 'package:gathrrhome/review.dart';
 import 'package:gathrrhome/trending.dart';
 
 class Details extends StatefulWidget {
-  const Details({ Key? key }) : super(key: key);
+  const Details({Key? key}) : super(key: key);
 
   @override
   _DetailsState createState() => _DetailsState();
@@ -18,7 +18,6 @@ class _DetailsState extends State<Details> {
     return Container(
       color: Colors.white,
       child: Scaffold(
-        
         resizeToAvoidBottomInset: false,
         backgroundColor: Colors.transparent,
         body: Column(
@@ -26,236 +25,231 @@ class _DetailsState extends State<Details> {
             SizedBox(
               height: height * 0.08,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                //SizedBox(
-                //width: width * 0.02,
-                //),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: GestureDetector(
-                      onTap: () {
-                        Navigator.pushAndRemoveUntil(
-                          context,
-                          MaterialPageRoute(builder: (context) => Trending()),
-                          (Route<dynamic> route) => false,
-                        );
-                      },
-                      child: Icon(
-                        Icons.arrow_back_ios,
-                        color: Colors.black,
-                      )),
-                ),
-                //SizedBox(
-                //  width: width * 0.2,
-                // ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    "Ongoing Event",
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 25,
-                        fontWeight: FontWeight.bold),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: GestureDetector(
-                            onTap: () {
-                              
-                            },
-                            child: Icon(Icons.share)),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: GestureDetector(
-                            onTap: () {
-                              
-                            },
-                            child: Icon(Icons.bookmark_border_outlined)),
-                      ),
-                    ],
-                  ),
-                ),
-              ]),
+            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+              //SizedBox(
+              //width: width * 0.02,
+              //),
               Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            border: Border.all(color: Colors.white, width: 2.5),
-                            //borderRadius: BorderRadius.circular(10),
-                            color: Colors.white,
-                           // boxShadow: [BoxShadow(color: Colors.grey.shade200)]
+                padding: const EdgeInsets.all(8.0),
+                child: GestureDetector(
+                    onTap: () {
+                      Navigator.pushAndRemoveUntil(
+                        context,
+                        MaterialPageRoute(builder: (context) => Trending()),
+                        (Route<dynamic> route) => false,
+                      );
+                    },
+                    child: Icon(
+                      Icons.arrow_back_ios,
+                      color: Color(0xFF6A6A6A),
+                    )),
+              ),
+              //SizedBox(
+              //  width: width * 0.2,
+              // ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  "Ongoing Event",
+                  style: TextStyle(
+                      color: Color(0xFF222455),
+                      fontFamily: "JosefinSans",
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(3.0),
+                      child: GestureDetector(
+                        onTap: () {},
+                        child: IconButton(
+                          icon: Padding(
+                            padding: const EdgeInsets.all(0.0),
+                            child: Image(
+                                image: AssetImage('assets/icon/share.png')),
                           ),
-                          child: Column(
-                            
-                            children: [
-                              
-                              Stack(
-                                children: <Widget>[
-                                  Container(
-                                      width: width * 0.95,
-                                      height: height * 0.2,
-                                      child: Image(
-                                        image: NetworkImage('https://c4.wallpaperflare.com/wallpaper/483/763/784/concerts-music-crowds-wallpaper-preview.jpg'),
-                                        fit: BoxFit.fill,
-                                      )),
-                                  Container(
-                                    width: width * 0.95,
-                                    height: height * 0.2,
-                                    //alignment: Alignment.center,
-                                    child: Column(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      children: [
-                                        Text(
-                                          'FREE NYC',
-                                          style: TextStyle(
-                                              color: Colors.blue.shade200,
-                                              fontSize: 28,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                        Text(
-                                          'NETWORKING',
-                                          style: TextStyle(
-                                              color: Colors.blue.shade200,
-                                              fontSize: 28,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                        Text(
-                                          'EVENT',
-                                          style: TextStyle(
-                                              color: Colors.blue.shade200,
-                                              fontSize: 28,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                      ],
+                          onPressed: () {},
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(3.0),
+                      child: GestureDetector(
+                        onTap: () {},
+                        child: IconButton(
+                          icon: Padding(
+                            padding: const EdgeInsets.all(3.0),
+                            child: Image(
+                                image: AssetImage('assets/icon/book.png')),
+                          ),
+                          onPressed: () {},
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ]),
+            Stack(
+              children: <Widget>[
+                ClipRRect(
+                    //borderRadius: BorderRadius.circular(5.0),
+                    child: Image(
+                  image: AssetImage('assets/photo/brooke.png'),
+                  fit: BoxFit.fill,
+                  width: width * 1,
+                  height: height * 0.25,
+                )),
+                
+                         
+                    
+                  
+                
+                Padding(
+                  padding: const EdgeInsets.only(top: 162),
+                  child: Center(
+                    
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Color(0xCCFFFFFF),
+                        borderRadius:
+                                              BorderRadius.circular(30.0),
+                      ),
+                      height: height * 0.06,
+                      width: width * 0.8,
+                    ),
+                  ),
+                )
+              ],
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                children: [
+                  Container(
+                              width: width * 0.87,
+                              height: height * 0.05,
+                              child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "Happy Bones",
+                                      style: TextStyle(
+                                          color: Color(0xFF3E3F68),
+                                          fontSize: 22,
+                                          fontWeight: FontWeight.bold,
+                                          fontFamily: "JosefinSans"),
                                     ),
-                                  )
-                                ],
-                              ),
-                              Container(
-                                width: width * 0.95,
-                                height: height * 0.05,
-                                //color: Colors.white,
-                                child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        "Happy Bones",
-                                        style: TextStyle(
-                                            fontSize: 22,
-                                            fontWeight: FontWeight.bold),
+                                    SizedBox(
+                                      width: width * 0.02,
+                                    ),
+                                    Container(
+                                      alignment: Alignment.center,
+                                      child: Text(
+                                        "Italian",
+                                        style: TextStyle(color: Colors.white),
                                       ),
-                                      SizedBox(
-                                        width: width * 0.013,
-                                      ),
-                                      Container(
-                                        alignment: Alignment.center,
-                                        child: Text(
-                                          "Italian",
-                                        ),
-                                        height: 30,
-                                        width: 70,
-                                        decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(22.0),
-                                          gradient: LinearGradient(
-                                            begin: Alignment(0.93, 0.0),
-                                            end: Alignment(-1.0, 0.0),
-                                            colors: [
-                                              const Color(0xa6ff5673),
-                                              const Color(0xa6ff8c48)
-                                            ],
-                                            stops: [0.0, 1.0],
-                                          ),
-                                          boxShadow: [
-                                            BoxShadow(
-                                              color: const Color(0x08000000),
-                                              offset: Offset(0, 10),
-                                              blurRadius: 99,
-                                            ),
+                                      height: height * 0.025,
+                                      width: width * 0.12,
+                                      decoration: BoxDecoration(
+                                        borderRadius:
+                                            BorderRadius.circular(22.0),
+                                        gradient: LinearGradient(
+                                          colors: [
+                                            Color(0xFFFF8C48),
+                                            Color(0xFFFF5673),
+                                            
                                           ],
+                                          //stops: [0.0, 1.0],
                                         ),
                                       ),
-                                      SizedBox(
-                                        width: width * 0.013,
+                                    ),
+                                    SizedBox(
+                                      width: width * 0.02,
+                                    ),
+                                    Container(
+                                      alignment: Alignment.center,
+                                      child: Text(
+                                        "1.2km",
+                                        style: TextStyle(color: Colors.white),
                                       ),
-                                      Container(
-                                        alignment: Alignment.center,
-                                        child: Text("1.2km"),
-                                        height: 30,
-                                        width: 70,
-                                        decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(21.0),
-                                          color: const Color(0xff848dff),
-                                        ),
+                                      height: height * 0.025,
+                                      width: width * 0.12,
+                                      decoration: BoxDecoration(
+                                        borderRadius:
+                                            BorderRadius.circular(21.0),
+                                        color: const Color(0xff848dff),
                                       ),
-                                      SizedBox(
-                                        width: width * 0.013,
-                                      ),
-                                      Container(
-                                        height: height*0.03,
-                                        width: width*0.2,
-                                        child: Image(image: AssetImage('assets/friends.png'),))
-                                    ]),
-                              ),
-                              Container(
-                                //color: Colors.white,
-                                width: width * 0.95,
-                                child: Text(
-                                  "394 Broome St, New York,NY 10013, USA",
-                                  style: TextStyle(fontSize: 20,color: Colors.grey),
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Column(
-                          children: [
-                            Row(
-                              children: [
-                                
-                                Text("Active Now",style: TextStyle(
-                                  color: Colors.red,fontSize: 17
-                                ),),
-                              ],
+                                    ),
+                                    SizedBox(
+                                      width: width * 0.01,
+                                    ),
+                                   
+                                  ]),
                             ),
-                            Row(
-                          children: [
+                            Center(
+                              child: Container(
+                                width: width * 0.87,
+                                child: Text(
+                                  "394 Broome St, New York, NY 10013, USA",
+                                  style: TextStyle(
+                                      fontSize: 15, color: Color(0xFF8A98BA),
+                                      fontFamily: "JosefinSans"),
+                                ),
+                              ),
+                            ),
                             
-                            Text("9:30 am to 11:00 am",style: TextStyle(
-                              color: Colors.red,fontSize: 17
-                            ),),
+                            Center(
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Column(
+                          children: [
+                                Row(
+                                  children: [
+                                    SizedBox(
+                                      width: width * 0.02,
+                                    ),
+                                    Text("Active Now",style: TextStyle(
+                                      color: Colors.red,fontSize: 17,
+                                      fontFamily: "JosefinSans"
+                                    ),),
+                                  ],
+                                ),
+                                Row(
+                          children: [
+                                SizedBox(
+                                      width: width * 0.02,
+                                    ),
+                                Text("9:30 am to 11:00 am",style: TextStyle(
+                                  color: Colors.red,fontSize: 17,fontFamily: "JosefinSans"
+                                ),),
                           ],
                         ),
-                        
-                          ],
+                        SizedBox(
+                          height: height * 0.01,
                         ),
-                      ),
-                      Padding(
+                        Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Row(
                             children: [
                               Text("Description",style: TextStyle(
-                                fontSize: 20,fontWeight: FontWeight.bold
+                                fontSize: 22,fontWeight: FontWeight.bold,
+                                fontFamily: "JosefinSans",
+                                color: Color(0xFF3E3F68),
                               ),),
                             ],
                           ),
                         ),
-                        Padding(
+                          Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Text("dcbsdcj ajdcbadjcba cjancja jcbajca djcbdsjc jdcbajcb djcbajc acjnajcba cnajcbaj acnajcbajc acajcnajc  ajcnajcbac  cajcbac ascjaskdsc mckancamcbah asjajack ac kvslvna cajcka cdcdln ds sdcljancs slkvmnca can sfvks  cls dvsd,m dlknsvahc cadcdlkcnc acas a elj sd sdkjalc",style: TextStyle(
-                            color: Colors.grey
+                            fontSize: 15, color: Color(0xFF8A98BA),
+                                      fontFamily: "JosefinSans"
                           ),),
                         ),
                         Padding(
@@ -265,19 +259,18 @@ class _DetailsState extends State<Details> {
                   children: [
                     Text(
                       "Attendees",
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                          fontSize: 22,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xFF3E3F68),
+                          fontFamily: "JosefinSans"),
                     ),
-                    GestureDetector(
-                      onTap: () {
-                        
-                        print('working');
-                      },
-                      child: Text(
-                        "See all(32)",
-                        style: TextStyle(
-                            color: Colors.blueGrey.shade200, fontSize: 15),
-                      ),
+                    Text(
+                      "See all (9)",
+                      style: TextStyle(
+                          color: Color(0xFF6E7FAA),
+                          fontSize: 15,
+                          fontFamily: "JosefinSans"),
                     )
                   ],
                 ),
@@ -290,7 +283,7 @@ class _DetailsState extends State<Details> {
                       padding: const EdgeInsets.all(8.0),
                       child: Container(
                         child: CircleAvatar(
-                          radius: 30,
+                          radius: 25,
                           backgroundImage: AssetImage('assets/photo/p1.jpeg'),
                           backgroundColor: Colors.transparent,
                         ),
@@ -302,22 +295,25 @@ class _DetailsState extends State<Details> {
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text("Elon Musk",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
-                          Text("Founder of SpaceX",style: TextStyle(color: Colors.grey.shade700),),
+                          Text("Elon Musk",style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold,color: Color(0xFF3E3F68),
+                        
+                          fontFamily: "JosefinSans"),),
+                          Text("Founder of SpaceX",style: TextStyle(color: Color(0xFF6E7FAA),
+                          fontSize: 15,
+                          fontFamily: "JosefinSans"),),
 
                         ],
                       ),
                     ),
                     SizedBox(
-                      width: width * 0.23,
+                      width: width * 0.17,
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: FlatButton(onPressed: (){}, child: Text("Follow",style: TextStyle(color: Colors.white,fontSize: 17),),color: Colors.blue,),
+                      child: FlatButton(onPressed: (){}, child: Text("Follow",style: TextStyle(color: Colors.white,fontSize: 18,fontFamily: "JosefinSans"),),color: Color(0xFF5663FF),),
                     )
                 ],
               ),
-
               Row(
                 //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -326,8 +322,8 @@ class _DetailsState extends State<Details> {
                       padding: const EdgeInsets.all(8.0),
                       child: Container(
                         child: CircleAvatar(
-                          radius: 30,
-                          backgroundImage: AssetImage('assets/photo/p2.jpeg'),
+                          radius: 25,
+                          backgroundImage: AssetImage('assets/photo/p1.jpeg'),
                           backgroundColor: Colors.transparent,
                         ),
                       ),
@@ -338,36 +334,56 @@ class _DetailsState extends State<Details> {
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text("Steve Jobs",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
-                          Text("Founder of Apple",style: TextStyle(color: Colors.grey.shade700),),
+                          Text("Elon Musk",style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold,color: Color(0xFF3E3F68),
+                        
+                          fontFamily: "JosefinSans"),),
+                          Text("Founder of SpaceX",style: TextStyle(color: Color(0xFF6E7FAA),
+                          fontSize: 15,
+                          fontFamily: "JosefinSans"),),
 
                         ],
                       ),
                     ),
                     SizedBox(
-                      width: width * 0.26,
+                      width: width * 0.17,
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: FlatButton(onPressed: (){}, child: Text("Follow",style: TextStyle(color: Colors.white,fontSize: 17),),color: Colors.blue,),
+                      child: FlatButton(onPressed: (){}, child: Text("Follow",style: TextStyle(color: Colors.white,fontSize: 18,fontFamily: "JosefinSans"),),color: Color(0xFF5663FF),),
                     )
                 ],
               ),
-              ],
+
+                        
+                          ],
+                        ),
+                              ),
+                            ),
+
+
+
+                ],
+              ),
             ),
-            bottomNavigationBar:GestureDetector(
-              onTap: (){
-                Navigator.pushAndRemoveUntil(
-                          context,
-                          MaterialPageRoute(builder: (context) => Review()),
-                          (Route<dynamic> route) => false,
-                        );
-              },
-              child: Container(
+          ],
+        ),
+        bottomNavigationBar: GestureDetector(
+          onTap: () {
+            Navigator.pushAndRemoveUntil(
+              context,
+              MaterialPageRoute(builder: (context) => Review()),
+              (Route<dynamic> route) => false,
+            );
+          },
+          child: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(
-                    topRight: Radius.circular(30), topLeft: Radius.circular(30)),
-                gradient: LinearGradient(colors: [Colors.orange.shade900,Colors.orange.shade300],begin: Alignment.topCenter,end: Alignment.bottomCenter),
+                    topRight: Radius.circular(30),
+                    topLeft: Radius.circular(30)),
+                gradient: LinearGradient(
+                    colors: [Color(0xFFFF7D65), Color(0xFFFFA150)],
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter),
                 //color: Colors.deepPurpleAccent,
                 boxShadow: [
                   BoxShadow(
@@ -392,18 +408,18 @@ class _DetailsState extends State<Details> {
                           child: Text(
                             "Check-In",
                             style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 20,
+                                color: Color(0xFFFFFFFF),
+                                fontFamily: "JosefinSans",
+                                fontSize: 22,
                                 fontWeight: FontWeight.bold),
                           ),
                         ),
                       ),
-                      
                     ],
                   ),
                 ),
               )),
-            ),
+        ),
       ),
     );
   }

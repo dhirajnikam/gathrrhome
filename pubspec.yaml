@@ -60,6 +60,13 @@ flutter:
       - assets/friends.png
       - assets/Path 78.png
       - assets/people.jpg
+      - assets/icon/ring.png
+      - assets/icon/book.png
+      - assets/icon/home.png
+      - assets/icon/person.png
+      - assets/icon/circle.png
+      - assets/icon/share.png
+      - assets/photo/brooke.png
   #    - assets/Path 434.png
   #   - images/a_dot_ham.jpeg
 

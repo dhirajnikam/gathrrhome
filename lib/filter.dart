@@ -34,7 +34,7 @@ class _FilterState extends State<Filter> {
     final double height = size.height;
     final double width = size.width;
     return Container(
-      color: Colors.white,
+      color: Colors.grey.shade50,
       child: Scaffold(
         resizeToAvoidBottomInset: false,
         backgroundColor: Colors.transparent,
@@ -46,9 +46,7 @@ class _FilterState extends State<Filter> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                //SizedBox(
-                //width: width * 0.02,
-                //),
+                
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: GestureDetector(
@@ -61,18 +59,17 @@ class _FilterState extends State<Filter> {
                       },
                       child: Icon(
                         Icons.arrow_back_ios,
-                        color: Colors.black,
+                        color: Color(0xFF6A6A6A),
                       )),
                 ),
-                //SizedBox(
-                //  width: width * 0.2,
-                // ),
+               
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
                     "Filter",
                     style: TextStyle(
-                        color: Colors.black,
+                        color: Color(0xFF222455),
+                        fontFamily: "JosefinSans",
                         fontSize: 25,
                         fontWeight: FontWeight.bold),
                   ),
@@ -87,7 +84,7 @@ class _FilterState extends State<Filter> {
                           (Route<dynamic> route) => false,
                         );
                       },
-                      child: Icon(Icons.close_outlined)),
+                      child: Icon(Icons.close_outlined,color: Color(0xFF222455),)),
                 )
               ],
             ),
@@ -98,7 +95,8 @@ class _FilterState extends State<Filter> {
               child: Text(
                 "Select Category",
                 style: TextStyle(
-                    color: Colors.black,
+                  fontFamily: "JosefinSans",
+                    color: Color(0xFF3E3F68),
                     fontSize: 25,
                     fontWeight: FontWeight.bold),
               ),
@@ -121,20 +119,27 @@ class _FilterState extends State<Filter> {
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                             colors: _press1
-                                ? [Colors.white, Colors.white10]
-                                : [Colors.orange, Colors.redAccent]),
-                        border: Border.all(
-                            color: _press1 ? Colors.blueGrey : Colors.white),
+                                ? [Colors.white, Colors.white]
+                                : [Color(0xFFFF8C48), Color(0xFFFF5673)]),
+                        //border: Border.all(
+                          
+                          //  color: _press1 ? Color(0xFF707070) : Colors.white),
                         borderRadius: BorderRadius.circular(10),
-                      ),
+                        boxShadow: [
+                        new BoxShadow(
+                            //offset: Offset(1,1),
+                            color: Color(0xFF6E7FAA)),
+                      ]),
+                      
                       height: height * 0.05,
                       width: width * 0.25,
                       child: Center(
                           child: Text(
                         "Business",
                         style: TextStyle(
+                          fontFamily: "JosefinSans",
                             fontSize: 19,
-                            color: _press1 ? Colors.black : Colors.white),
+                            color: _press1 ? Color(0xFF3E3F68) : Colors.white),
                       )),
                     ),
                   ),
@@ -151,20 +156,27 @@ class _FilterState extends State<Filter> {
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                             colors: _press2
-                                ? [Colors.white, Colors.white10]
-                                : [Colors.orange, Colors.redAccent]),
-                        border: Border.all(
-                            color: _press2 ? Colors.blueGrey : Colors.white),
+                                ? [Colors.white, Colors.white]
+                                : [Color(0xFFFF8C48), Color(0xFFFF5673)]),
+                        //border: Border.all(
+                          
+                          //  color: _press1 ? Color(0xFF707070) : Colors.white),
                         borderRadius: BorderRadius.circular(10),
-                      ),
+                        boxShadow: [
+                        new BoxShadow(
+                            //offset: Offset(1,1),
+                            color: Color(0xFF6E7FAA)),
+                      ]),
+                      
                       height: height * 0.05,
                       width: width * 0.25,
                       child: Center(
                           child: Text(
                         "Meetup",
                         style: TextStyle(
+                          fontFamily: "JosefinSans",
                             fontSize: 19,
-                            color: _press2 ? Colors.black : Colors.white),
+                            color: _press2 ? Color(0xFF3E3F68) : Colors.white),
                       )),
                     ),
                   ),
@@ -181,20 +193,27 @@ class _FilterState extends State<Filter> {
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                             colors: _press3
-                                ? [Colors.white, Colors.white10]
-                                : [Colors.orange, Colors.redAccent]),
-                        border: Border.all(
-                            color: _press3 ? Colors.blueGrey : Colors.white),
+                                ? [Colors.white, Colors.white]
+                                : [Color(0xFFFF8C48), Color(0xFFFF5673)]),
+                        //border: Border.all(
+                          
+                          //  color: _press1 ? Color(0xFF707070) : Colors.white),
                         borderRadius: BorderRadius.circular(10),
-                      ),
+                        boxShadow: [
+                        new BoxShadow(
+                            //offset: Offset(1,1),
+                            color: Color(0xFF6E7FAA)),
+                      ]),
+                      
                       height: height * 0.05,
                       width: width * 0.25,
                       child: Center(
                           child: Text(
                         "Startup",
                         style: TextStyle(
+                          fontFamily: "JosefinSans",
                             fontSize: 19,
-                            color: _press3 ? Colors.black : Colors.white),
+                            color: _press3 ? Color(0xFF3E3F68) : Colors.white),
                       )),
                     ),
                   ),
@@ -219,20 +238,27 @@ class _FilterState extends State<Filter> {
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                             colors: _press4
-                                ? [Colors.white, Colors.white10]
-                                : [Colors.orange, Colors.redAccent]),
-                        border: Border.all(
-                            color: _press4 ? Colors.blueGrey : Colors.white),
+                                ? [Colors.white, Colors.white]
+                                : [Color(0xFFFF8C48), Color(0xFFFF5673)]),
+                        //border: Border.all(
+                          
+                          //  color: _press1 ? Color(0xFF707070) : Colors.white),
                         borderRadius: BorderRadius.circular(10),
-                      ),
+                        boxShadow: [
+                        new BoxShadow(
+                            //offset: Offset(1,1),
+                            color: Color(0xFF6E7FAA)),
+                      ]),
+                      
                       height: height * 0.05,
                       width: width * 0.25,
                       child: Center(
                           child: Text(
                         "Casual",
                         style: TextStyle(
+                          fontFamily: "JosefinSans",
                             fontSize: 19,
-                            color: _press4 ? Colors.black : Colors.white),
+                            color: _press4 ? Color(0xFF3E3F68) : Colors.white),
                       )),
                     ),
                   ),
@@ -249,20 +275,27 @@ class _FilterState extends State<Filter> {
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                             colors: _press5
-                                ? [Colors.white, Colors.white10]
-                                : [Colors.orange, Colors.redAccent]),
-                        border: Border.all(
-                            color: _press5 ? Colors.blueGrey : Colors.white),
+                                ? [Colors.white, Colors.white]
+                                : [Color(0xFFFF8C48), Color(0xFFFF5673)]),
+                        //border: Border.all(
+                          
+                          //  color: _press1 ? Color(0xFF707070) : Colors.white),
                         borderRadius: BorderRadius.circular(10),
-                      ),
+                        boxShadow: [
+                        new BoxShadow(
+                            //offset: Offset(1,1),
+                            color: Color(0xFF6E7FAA)),
+                      ]),
+                      
                       height: height * 0.05,
                       width: width * 0.25,
                       child: Center(
                           child: Text(
                         "Fun",
                         style: TextStyle(
+                          fontFamily: "JosefinSans",
                             fontSize: 19,
-                            color: _press5 ? Colors.black : Colors.white),
+                            color: _press5 ? Color(0xFF3E3F68) : Colors.white),
                       )),
                     ),
                   ),
@@ -279,20 +312,27 @@ class _FilterState extends State<Filter> {
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                             colors: _press6
-                                ? [Colors.white, Colors.white10]
-                                : [Colors.orange, Colors.redAccent]),
-                        border: Border.all(
-                            color: _press6 ? Colors.blueGrey : Colors.white),
+                                ? [Colors.white, Colors.white]
+                                : [Color(0xFFFF8C48), Color(0xFFFF5673)]),
+                        //border: Border.all(
+                          
+                          //  color: _press1 ? Color(0xFF707070) : Colors.white),
                         borderRadius: BorderRadius.circular(10),
-                      ),
+                        boxShadow: [
+                        new BoxShadow(
+                            //offset: Offset(1,1),
+                            color: Color(0xFF6E7FAA)),
+                      ]),
+                      
                       height: height * 0.05,
                       width: width * 0.25,
                       child: Center(
                           child: Text(
                         "Adventure",
                         style: TextStyle(
+                          fontFamily: "JosefinSans",
                             fontSize: 19,
-                            color: _press6 ? Colors.black : Colors.white),
+                            color: _press6 ? Color(0xFF3E3F68) : Colors.white),
                       )),
                     ),
                   ),
@@ -317,20 +357,27 @@ class _FilterState extends State<Filter> {
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                             colors: _press7
-                                ? [Colors.white, Colors.white10]
-                                : [Colors.orange, Colors.redAccent]),
-                        border: Border.all(
-                            color: _press7 ? Colors.blueGrey : Colors.white),
+                                ? [Colors.white, Colors.white]
+                                : [Color(0xFFFF8C48), Color(0xFFFF5673)]),
+                        //border: Border.all(
+                          
+                          //  color: _press1 ? Color(0xFF707070) : Colors.white),
                         borderRadius: BorderRadius.circular(10),
-                      ),
+                        boxShadow: [
+                        new BoxShadow(
+                            //offset: Offset(1,1),
+                            color: Color(0xFF6E7FAA)),
+                      ]),
+                      
                       height: height * 0.05,
                       width: width * 0.25,
                       child: Center(
                           child: Text(
                         "Business",
                         style: TextStyle(
+                          fontFamily: "JosefinSans",
                             fontSize: 19,
-                            color: _press7 ? Colors.black : Colors.white),
+                            color: _press7 ? Color(0xFF3E3F68) : Colors.white),
                       )),
                     ),
                   ),
@@ -347,20 +394,27 @@ class _FilterState extends State<Filter> {
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                             colors: _press8
-                                ? [Colors.white, Colors.white10]
-                                : [Colors.orange, Colors.redAccent]),
-                        border: Border.all(
-                            color: _press8 ? Colors.blueGrey : Colors.white),
+                                ? [Colors.white, Colors.white]
+                                : [Color(0xFFFF8C48), Color(0xFFFF5673)]),
+                        //border: Border.all(
+                          
+                          //  color: _press1 ? Color(0xFF707070) : Colors.white),
                         borderRadius: BorderRadius.circular(10),
-                      ),
+                        boxShadow: [
+                        new BoxShadow(
+                            //offset: Offset(1,1),
+                            color: Color(0xFF6E7FAA)),
+                      ]),
+                      
                       height: height * 0.05,
                       width: width * 0.25,
                       child: Center(
                           child: Text(
                         "Meetup",
                         style: TextStyle(
+                          fontFamily: "JosefinSans",
                             fontSize: 19,
-                            color: _press8 ? Colors.black : Colors.white),
+                            color: _press8 ? Color(0xFF3E3F68) : Colors.white),
                       )),
                     ),
                   ),
@@ -377,20 +431,27 @@ class _FilterState extends State<Filter> {
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                             colors: _press9
-                                ? [Colors.white, Colors.white10]
-                                : [Colors.orange, Colors.redAccent]),
-                        border: Border.all(
-                            color: _press9 ? Colors.blueGrey : Colors.white),
+                                ? [Colors.white, Colors.white]
+                                : [Color(0xFFFF8C48), Color(0xFFFF5673)]),
+                        //border: Border.all(
+                          
+                          //  color: _press1 ? Color(0xFF707070) : Colors.white),
                         borderRadius: BorderRadius.circular(10),
-                      ),
+                        boxShadow: [
+                        new BoxShadow(
+                            //offset: Offset(1,1),
+                            color: Color(0xFF6E7FAA)),
+                      ]),
+                      
                       height: height * 0.05,
                       width: width * 0.25,
                       child: Center(
                           child: Text(
                         "Startup",
                         style: TextStyle(
+                          fontFamily: "JosefinSans",
                             fontSize: 19,
-                            color: _press9 ? Colors.black : Colors.white),
+                            color: _press9 ? Color(0xFF3E3F68) : Colors.white),
                       )),
                     ),
                   ),
@@ -415,20 +476,27 @@ class _FilterState extends State<Filter> {
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                             colors: _press10
-                                ? [Colors.white, Colors.white10]
-                                : [Colors.orange, Colors.redAccent]),
-                        border: Border.all(
-                            color: _press10 ? Colors.blueGrey : Colors.white),
+                                ? [Colors.white, Colors.white]
+                                : [Color(0xFFFF8C48), Color(0xFFFF5673)]),
+                        //border: Border.all(
+                          
+                          //  color: _press1 ? Color(0xFF707070) : Colors.white),
                         borderRadius: BorderRadius.circular(10),
-                      ),
+                        boxShadow: [
+                        new BoxShadow(
+                            //offset: Offset(1,1),
+                            color: Color(0xFF6E7FAA)),
+                      ]),
+                      
                       height: height * 0.05,
                       width: width * 0.25,
                       child: Center(
                           child: Text(
-                        "Business",
+                        "Casual",
                         style: TextStyle(
+                          fontFamily: "JosefinSans",
                             fontSize: 19,
-                            color: _press10 ? Colors.black : Colors.white),
+                            color: _press10 ? Color(0xFF3E3F68) : Colors.white),
                       )),
                     ),
                   ),
@@ -445,20 +513,27 @@ class _FilterState extends State<Filter> {
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                             colors: _press11
-                                ? [Colors.white, Colors.white10]
-                                : [Colors.orange, Colors.redAccent]),
-                        border: Border.all(
-                            color: _press11 ? Colors.blueGrey : Colors.white),
+                                ? [Colors.white, Colors.white]
+                                : [Color(0xFFFF8C48), Color(0xFFFF5673)]),
+                        //border: Border.all(
+                          
+                          //  color: _press1 ? Color(0xFF707070) : Colors.white),
                         borderRadius: BorderRadius.circular(10),
-                      ),
+                        boxShadow: [
+                        new BoxShadow(
+                            //offset: Offset(1,1),
+                            color: Color(0xFF6E7FAA)),
+                      ]),
+                      
                       height: height * 0.05,
                       width: width * 0.25,
                       child: Center(
                           child: Text(
-                        "Meetup",
+                        "Fun",
                         style: TextStyle(
+                          fontFamily: "JosefinSans",
                             fontSize: 19,
-                            color: _press11 ? Colors.black : Colors.white),
+                            color: _press11 ? Color(0xFF3E3F68) : Colors.white),
                       )),
                     ),
                   ),
@@ -475,20 +550,27 @@ class _FilterState extends State<Filter> {
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                             colors: _press12
-                                ? [Colors.white, Colors.white10]
-                                : [Colors.orange, Colors.redAccent]),
-                        border: Border.all(
-                            color: _press12 ? Colors.blueGrey : Colors.white),
+                                ? [Colors.white, Colors.white]
+                                : [Color(0xFFFF8C48), Color(0xFFFF5673)]),
+                        //border: Border.all(
+                          
+                          //  color: _press1 ? Color(0xFF707070) : Colors.white),
                         borderRadius: BorderRadius.circular(10),
-                      ),
+                        boxShadow: [
+                        new BoxShadow(
+                            //offset: Offset(1,1),
+                            color: Color(0xFF6E7FAA)),
+                      ]),
+                      
                       height: height * 0.05,
                       width: width * 0.25,
                       child: Center(
                           child: Text(
-                        "Startup",
+                        "Adventure",
                         style: TextStyle(
+                          fontFamily: "JosefinSans",
                             fontSize: 19,
-                            color: _press12 ? Colors.black : Colors.white),
+                            color: _press12 ? Color(0xFF3E3F68) : Colors.white),
                       )),
                     ),
                   ),
@@ -513,20 +595,27 @@ class _FilterState extends State<Filter> {
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                             colors: _press13
-                                ? [Colors.white, Colors.white10]
-                                : [Colors.orange, Colors.redAccent]),
-                        border: Border.all(
-                            color: _press13 ? Colors.blueGrey : Colors.white),
+                                ? [Colors.white, Colors.white]
+                                : [Color(0xFFFF8C48), Color(0xFFFF5673)]),
+                        //border: Border.all(
+                          
+                          //  color: _press1 ? Color(0xFF707070) : Colors.white),
                         borderRadius: BorderRadius.circular(10),
-                      ),
+                        boxShadow: [
+                        new BoxShadow(
+                            //offset: Offset(1,1),
+                            color: Color(0xFF6E7FAA)),
+                      ]),
+                      
                       height: height * 0.05,
                       width: width * 0.25,
                       child: Center(
                           child: Text(
                         "Business",
                         style: TextStyle(
+                          fontFamily: "JosefinSans",
                             fontSize: 19,
-                            color: _press13 ? Colors.black : Colors.white),
+                            color: _press13 ? Color(0xFF3E3F68) : Colors.white),
                       )),
                     ),
                   ),
@@ -543,20 +632,27 @@ class _FilterState extends State<Filter> {
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                             colors: _press14
-                                ? [Colors.white, Colors.white10]
-                                : [Colors.orange, Colors.redAccent]),
-                        border: Border.all(
-                            color: _press14 ? Colors.blueGrey : Colors.white),
+                                ? [Colors.white, Colors.white]
+                                : [Color(0xFFFF8C48), Color(0xFFFF5673)]),
+                        //border: Border.all(
+                          
+                          //  color: _press1 ? Color(0xFF707070) : Colors.white),
                         borderRadius: BorderRadius.circular(10),
-                      ),
+                        boxShadow: [
+                        new BoxShadow(
+                            //offset: Offset(1,1),
+                            color: Color(0xFF6E7FAA)),
+                      ]),
+                      
                       height: height * 0.05,
                       width: width * 0.25,
                       child: Center(
                           child: Text(
                         "Meetup",
                         style: TextStyle(
+                          fontFamily: "JosefinSans",
                             fontSize: 19,
-                            color: _press14 ? Colors.black : Colors.white),
+                            color: _press14 ? Color(0xFF3E3F68) : Colors.white),
                       )),
                     ),
                   ),
@@ -573,20 +669,27 @@ class _FilterState extends State<Filter> {
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                             colors: _press15
-                                ? [Colors.white, Colors.white10]
-                                : [Colors.orange, Colors.redAccent]),
-                        border: Border.all(
-                            color: _press15 ? Colors.blueGrey : Colors.white),
+                                ? [Colors.white, Colors.white]
+                                : [Color(0xFFFF8C48), Color(0xFFFF5673)]),
+                        //border: Border.all(
+                          
+                          //  color: _press1 ? Color(0xFF707070) : Colors.white),
                         borderRadius: BorderRadius.circular(10),
-                      ),
+                        boxShadow: [
+                        new BoxShadow(
+                            //offset: Offset(1,1),
+                            color: Color(0xFF6E7FAA)),
+                      ]),
+                      
                       height: height * 0.05,
                       width: width * 0.25,
                       child: Center(
                           child: Text(
                         "Startup",
                         style: TextStyle(
+                          fontFamily: "JosefinSans",
                             fontSize: 19,
-                            color: _press15 ? Colors.black : Colors.white),
+                            color: _press15 ? Color(0xFF3E3F68) : Colors.white),
                       )),
                     ),
                   ),
@@ -611,20 +714,27 @@ class _FilterState extends State<Filter> {
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                             colors: _press16
-                                ? [Colors.white, Colors.white10]
-                                : [Colors.orange, Colors.redAccent]),
-                        border: Border.all(
-                            color: _press16 ? Colors.blueGrey : Colors.white),
+                                ? [Colors.white, Colors.white]
+                                : [Color(0xFFFF8C48), Color(0xFFFF5673)]),
+                        //border: Border.all(
+                          
+                          //  color: _press1 ? Color(0xFF707070) : Colors.white),
                         borderRadius: BorderRadius.circular(10),
-                      ),
+                        boxShadow: [
+                        new BoxShadow(
+                            //offset: Offset(1,1),
+                            color: Color(0xFF6E7FAA)),
+                      ]),
+                      
                       height: height * 0.05,
                       width: width * 0.25,
                       child: Center(
                           child: Text(
-                        "Business",
+                        "Casual",
                         style: TextStyle(
+                          fontFamily: "JosefinSans",
                             fontSize: 19,
-                            color: _press16 ? Colors.black : Colors.white),
+                            color: _press16 ? Color(0xFF3E3F68) : Colors.white),
                       )),
                     ),
                   ),
@@ -641,20 +751,27 @@ class _FilterState extends State<Filter> {
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                             colors: _press17
-                                ? [Colors.white, Colors.white10]
-                                : [Colors.orange, Colors.redAccent]),
-                        border: Border.all(
-                            color: _press17 ? Colors.blueGrey : Colors.white),
+                                ? [Colors.white, Colors.white]
+                                : [Color(0xFFFF8C48), Color(0xFFFF5673)]),
+                        //border: Border.all(
+                          
+                          //  color: _press1 ? Color(0xFF707070) : Colors.white),
                         borderRadius: BorderRadius.circular(10),
-                      ),
+                        boxShadow: [
+                        new BoxShadow(
+                            //offset: Offset(1,1),
+                            color: Color(0xFF6E7FAA)),
+                      ]),
+                      
                       height: height * 0.05,
                       width: width * 0.25,
                       child: Center(
                           child: Text(
-                        "Meetup",
+                        "Fun",
                         style: TextStyle(
+                          fontFamily: "JosefinSans",
                             fontSize: 19,
-                            color: _press17 ? Colors.black : Colors.white),
+                            color: _press17 ? Color(0xFF3E3F68) : Colors.white),
                       )),
                     ),
                   ),
@@ -671,33 +788,41 @@ class _FilterState extends State<Filter> {
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                             colors: _press18
-                                ? [Colors.white, Colors.white10]
-                                : [Colors.orange, Colors.redAccent]),
-                        border: Border.all(
-                            color: _press18 ? Colors.blueGrey : Colors.white),
+                                ? [Colors.white, Colors.white]
+                                : [Color(0xFFFF8C48), Color(0xFFFF5673)]),
+                        //border: Border.all(
+                          
+                          //  color: _press1 ? Color(0xFF707070) : Colors.white),
                         borderRadius: BorderRadius.circular(10),
-                      ),
+                        boxShadow: [
+                        new BoxShadow(
+                            //offset: Offset(1,1),
+                            color: Color(0xFF6E7FAA)),
+                      ]),
+                      
                       height: height * 0.05,
                       width: width * 0.25,
                       child: Center(
                           child: Text(
-                        "Startup",
+                        "Adventure",
                         style: TextStyle(
+                          fontFamily: "JosefinSans",
                             fontSize: 19,
-                            color: _press18 ? Colors.black : Colors.white),
+                            color: _press18 ? Color(0xFF3E3F68) : Colors.white),
                       )),
                     ),
                   ),
                 ),
               ],
             ),
+            
           ],
         ),
         bottomNavigationBar: Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.only(
                   topRight: Radius.circular(30), topLeft: Radius.circular(30)),
-              color: Colors.deepPurpleAccent,
+              color: Color(0xFF5663FF),
               boxShadow: [
                 BoxShadow(
                     color: Colors.black38, spreadRadius: 0, blurRadius: 3),
@@ -720,14 +845,15 @@ class _FilterState extends State<Filter> {
                       child: Text(
                         "Reset",
                         style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 20,
+                            color: Color(0xFFFFFFFF),
+                          fontFamily: "JosefinSans",
+                            fontSize: 22,
                             fontWeight: FontWeight.bold),
                       ),
                     ),SizedBox(
                       width: width * 0.2,
                     ),
-                    Container(height: 80, child: VerticalDivider(color: Colors.white)),
+                    Container(height: height * 0.095, child: VerticalDivider(color: Colors.white)),
                     SizedBox(
                       width: width * 0.2,
                     ),
@@ -736,8 +862,9 @@ class _FilterState extends State<Filter> {
                       child: Text(
                         "Apply",
                         style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 20,
+                          color: Color(0xFFFFFFFF),
+                          fontFamily: "JosefinSans",
+                            fontSize: 22,
                             fontWeight: FontWeight.bold),
                       ),
                     ),

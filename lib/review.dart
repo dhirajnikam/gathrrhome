@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gathrrhome/details.dart';
 import 'package:gathrrhome/trending.dart';
 
 class Review extends StatefulWidget {
@@ -41,13 +42,13 @@ class _ReviewState extends State<Review> {
                       onTap: () {
                         Navigator.pushAndRemoveUntil(
                           context,
-                          MaterialPageRoute(builder: (context) => Trending()),
+                          MaterialPageRoute(builder: (context) => Details()),
                           (Route<dynamic> route) => false,
                         );
                       },
                       child: Icon(
                         Icons.arrow_back_ios,
-                        color: Colors.black,
+                        color: Color(0xFF6A6A6A),
                       )),
                 ),
                 //SizedBox(
@@ -58,7 +59,8 @@ class _ReviewState extends State<Review> {
                   child: Text(
                     "Review & Ratings",
                     style: TextStyle(
-                        color: Colors.black,
+                        color: Color(0xFF222455),
+                        fontFamily: "JosefinSans",
                         fontSize: 25,
                         fontWeight: FontWeight.bold),
                   ),
@@ -69,11 +71,11 @@ class _ReviewState extends State<Review> {
                       onTap: () {
                         Navigator.pushAndRemoveUntil(
                           context,
-                          MaterialPageRoute(builder: (context) => Trending()),
+                          MaterialPageRoute(builder: (context) => Details()),
                           (Route<dynamic> route) => false,
                         );
                       },
-                      child: Icon(Icons.close_outlined)),
+                      child: Icon(Icons.close_outlined,color: Color(0xFF222455),)),
                 )
               ],
             ),
@@ -148,7 +150,8 @@ class _ReviewState extends State<Review> {
           SizedBox(
             height: height * 0.017,
           ),
-          Text("Rate your experience",style: TextStyle(color: Colors.grey),),
+          Text("Rate your experience",style: TextStyle(color: Color(0xFF8A98BA),
+                      fontFamily: "JosefinSans",fontSize: 15),),
           SizedBox(
             height: height * 0.03,
           ),
@@ -156,12 +159,16 @@ class _ReviewState extends State<Review> {
               padding: const EdgeInsets.all(8.0),
 
               child: Container(
+                //color: Color(0xFF8A98BA),
                 height: height * 0.3,
               width: width * 0.9,
                 child: TextFormField(maxLines:10,
                 
                   decoration: const InputDecoration(
-                    
+                    hintStyle: TextStyle(
+                      color: Color(0xFF8A98BA),
+                      fontFamily: "JosefinSans",
+                    ),
                     hintText: 'Write your experience',
                     border: OutlineInputBorder()
                   ),
@@ -174,8 +181,8 @@ class _ReviewState extends State<Review> {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.only(
                   topRight: Radius.circular(30), topLeft: Radius.circular(30)),
-              // gradient: LinearGradient(colors: [Colors.orange.shade900,Colors.orange.shade300],begin: Alignment.topCenter,end: Alignment.bottomCenter),
-              color: Colors.deepPurpleAccent,
+    
+              color: Color(0xFF5663FF),
               boxShadow: [
                 BoxShadow(
                     color: Colors.black38, spreadRadius: 0, blurRadius: 3),
@@ -199,8 +206,10 @@ class _ReviewState extends State<Review> {
                         child: Text(
                           "Done",
                           style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20,
+                            color: Color(0xFFFFFFFF),
+                                fontFamily: "JosefinSans",
+                                fontSize: 22,
+                              
                               fontWeight: FontWeight.bold),
                         ),
                       ),
