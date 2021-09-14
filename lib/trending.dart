@@ -42,7 +42,7 @@ class _TrendingState extends State<Trending> {
                       },
                       child: Icon(
                         Icons.arrow_back_ios,
-                        color: Colors.black,
+                        color: Color(0xFF6A6A6A),
                       )),
                   SizedBox(
                     width: width * 0.2,
@@ -50,7 +50,8 @@ class _TrendingState extends State<Trending> {
                   Text(
                     "Trending Events",
                     style: TextStyle(
-                        color: Colors.black,
+                        color: Color(0xFF222455),
+                        fontFamily: "JosefinSans",
                         fontSize: 25,
                         fontWeight: FontWeight.bold),
                   ),
@@ -66,33 +67,27 @@ class _TrendingState extends State<Trending> {
                   decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(10),
-                      border: Border.all(color: Colors.blueGrey.shade200),
+                      //border: Border.all(color: HexColor("#6E7FAA")),
                       boxShadow: [
                         new BoxShadow(
                             //offset: Offset(1,1),
-                            color: Colors.black),
+                            color: Color(0xFF6E7FAA)),
                       ]),
                   child: TextField(
                     decoration: InputDecoration(
                       hintStyle: TextStyle(
-                          fontSize: 17, color: Colors.blueGrey.shade200),
-                      hintText: 'Search',
+                          fontSize: 23,
+                          color: Color(0xFF6E7FAA),
+                          fontFamily: "JosefinSans"),
+                      hintText: 'Find Events',
                       hintTextDirection: TextDirection.ltr,
-                      prefixIcon:
-                          Icon(Icons.search, color: Colors.blueGrey.shade200),
+                      prefixIcon: Padding(
+                        padding: const EdgeInsets.all(20.0),
+                        child: Image(image: AssetImage('assets/Path 78.png')),
+                      ),
                       suffixIcon: Padding(
-                        padding: const EdgeInsets.all(15.0),
-                        child: GestureDetector(
-                            onTap: () {
-                              Navigator.pushAndRemoveUntil(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => Filter()),
-                                (Route<dynamic> route) => false,
-                              );
-                            },
-                            child: Image(
-                                image: AssetImage('assets/Group 236.png'))),
+                        padding: const EdgeInsets.all(20.0),
+                        child: Image(image: AssetImage('assets/Group 236.png')),
                       ),
                       border: InputBorder.none,
                       contentPadding: EdgeInsets.all(20),
@@ -100,71 +95,116 @@ class _TrendingState extends State<Trending> {
                   ),
                 ),
               ),
+           
               Container(
-                  // margin: EdgeInsets.symmetric(vertical: 10.0),
-                  height: height * 0.65,
-                  // width: width * 0.2,
-                  //color: Colors.white,
-                  child: ListView(scrollDirection: Axis.vertical, children: <
+                  height: height * 0.69,
+                  child: ListView(scrollDirection: Axis.vertical, shrinkWrap: true,children: <
                       Widget>[
-                    
                     GestureDetector(
-                      onTap: (){
-                            Navigator.pushAndRemoveUntil(
+                      onTap: () {
+                        Navigator.pushAndRemoveUntil(
                           context,
                           MaterialPageRoute(builder: (context) => Details()),
                           (Route<dynamic> route) => false,
                         );
-                          },
+                      },
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            border: Border.all(color: Colors.white, width: 2.5),
-                            borderRadius: BorderRadius.circular(10),
-                            color: Colors.white,
-                           // boxShadow: [BoxShadow(color: Colors.grey.shade200)]
-                          ),
+                        child: Card(
+                          elevation: 5,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(5)),
                           child: Column(
-                            
                             children: [
-                              
                               Stack(
                                 children: <Widget>[
-                                  Container(
-                                      width: width * 0.95,
-                                      height: height * 0.2,
+                                  ClipRRect(
+                                      borderRadius: BorderRadius.circular(5.0),
                                       child: Image(
-                                        image: NetworkImage('https://c4.wallpaperflare.com/wallpaper/483/763/784/concerts-music-crowds-wallpaper-preview.jpg'),
+                                        image: AssetImage('assets/cover.jpg'),
                                         fit: BoxFit.fill,
+                                        width: width * 0.95,
+                                        height: height * 0.25,
                                       )),
                                   Container(
                                     width: width * 0.95,
-                                    height: height * 0.2,
+                                    height: height * 0.25,
                                     //alignment: Alignment.center,
                                     child: Column(
-                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
                                       children: [
                                         Text(
                                           'FREE NYC',
                                           style: TextStyle(
-                                              color: Colors.blue.shade200,
-                                              fontSize: 28,
+                                              color: Color(0xFF00ffff),
+                                              fontSize: 45,
                                               fontWeight: FontWeight.bold),
                                         ),
                                         Text(
                                           'NETWORKING',
                                           style: TextStyle(
-                                              color: Colors.blue.shade200,
-                                              fontSize: 28,
+                                              color: Color(0xFF00ffff),
+                                              fontSize: 45,
                                               fontWeight: FontWeight.bold),
                                         ),
                                         Text(
                                           'EVENT',
                                           style: TextStyle(
-                                              color: Colors.blue.shade200,
-                                              fontSize: 28,
+                                              color: Color(0xFF00ffff),
+                                              fontSize: 45,
                                               fontWeight: FontWeight.bold),
+                                        ),
+                                        SizedBox(
+                                          height: height * 0.05,
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                  Container(
+                                    width: width * 0.95,
+                                    height: height * 0.05,
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        SizedBox(
+                                          width: width * 0.02,
+                                        ),
+                                        Container(
+                                          alignment: Alignment.center,
+                                          height: height * 0.025,
+                                          width: width * 0.12,
+                                          color: Colors.white,
+                                          child: Text(
+                                            "3:30",
+                                            style: TextStyle(
+                                              color: Color(0xFF4CD964),
+                                              fontFamily: "JosefinSans",
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                            // textAlign: TextAlign.center,
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          width: width * 0.6,
+                                        ),
+                                        Container(
+                                          height: height * 0.025,
+                                          width: width * 0.12,
+                                          color: Colors.white,
+                                          child: Row(
+                                            children: [
+                                              Icon(
+                                                Icons.star,
+                                                color: Colors.amber.shade300,
+                                              ),
+                                              Text("4.5")
+                                            ],
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          width: width * 0.02,
                                         ),
                                       ],
                                     ),
@@ -174,55 +214,52 @@ class _TrendingState extends State<Trending> {
                               Container(
                                 width: width * 0.95,
                                 height: height * 0.05,
-                                //color: Colors.white,
                                 child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceAround,
                                     children: [
                                       Text(
                                         "Happy Bones",
                                         style: TextStyle(
-                                            fontSize: 22,
-                                            fontWeight: FontWeight.bold),
+                                            color: Color(0xFF3E3F68),
+                                            fontSize: 25,
+                                            fontWeight: FontWeight.bold,
+                                            fontFamily: "JosefinSans"),
                                       ),
                                       SizedBox(
-                                        width: width * 0.013,
+                                        width: width * 0.005,
                                       ),
                                       Container(
                                         alignment: Alignment.center,
                                         child: Text(
                                           "Italian",
+                                          style: TextStyle(color: Colors.white),
                                         ),
-                                        height: 30,
-                                        width: 70,
+                                        height: height * 0.025,
+                                        width: width * 0.12,
                                         decoration: BoxDecoration(
                                           borderRadius:
                                               BorderRadius.circular(22.0),
                                           gradient: LinearGradient(
-                                            begin: Alignment(0.93, 0.0),
-                                            end: Alignment(-1.0, 0.0),
                                             colors: [
-                                              const Color(0xa6ff5673),
-                                              const Color(0xa6ff8c48)
+                                              Color(0xFFFF5673),
+                                              Color(0xFFFF8C48)
                                             ],
-                                            stops: [0.0, 1.0],
+                                            //stops: [0.0, 1.0],
                                           ),
-                                          boxShadow: [
-                                            BoxShadow(
-                                              color: const Color(0x08000000),
-                                              offset: Offset(0, 10),
-                                              blurRadius: 99,
-                                            ),
-                                          ],
                                         ),
                                       ),
                                       SizedBox(
-                                        width: width * 0.013,
+                                        width: width * 0.005,
                                       ),
                                       Container(
                                         alignment: Alignment.center,
-                                        child: Text("1.2km"),
-                                        height: 30,
-                                        width: 70,
+                                        child: Text(
+                                          "1.2km",
+                                          style: TextStyle(color: Colors.white),
+                                        ),
+                                        height: height * 0.025,
+                                        width: width * 0.12,
                                         decoration: BoxDecoration(
                                           borderRadius:
                                               BorderRadius.circular(21.0),
@@ -230,20 +267,25 @@ class _TrendingState extends State<Trending> {
                                         ),
                                       ),
                                       SizedBox(
-                                        width: width * 0.013,
+                                        width: width * 0.005,
                                       ),
                                       Container(
-                                        height: height*0.03,
-                                        width: width*0.2,
-                                        child: Image(image: AssetImage('assets/friends.png'),))
+                                          //height: height*0.1,
+                                          width: width * 0.2,
+                                          child: Image(
+                                            image: AssetImage(
+                                                'assets/friends.png'),
+                                          ))
                                     ]),
                               ),
-                              Container(
-                                //color: Colors.white,
-                                width: width * 0.95,
-                                child: Text(
-                                  "394 Broome St, New York,NY 10013, USA",
-                                  style: TextStyle(fontSize: 20),
+                              Center(
+                                child: Container(
+                                  width: width * 0.95,
+                                  child: Text(
+                                    "394 Broome St, New York, NY 10013, USA",
+                                    style: TextStyle(
+                                        fontSize: 15, color: Color(0xFF8A98BA)),
+                                  ),
                                 ),
                               )
                             ],
@@ -251,140 +293,378 @@ class _TrendingState extends State<Trending> {
                         ),
                       ),
                     ),
-
                     Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          border: Border.all(color: Colors.white, width: 2.5),
-                          borderRadius: BorderRadius.circular(10),
-                          color: Colors.white
-                        ),
-                        child: Column(
-                          children: [
-                            Stack(
-                              children: <Widget>[
-                                Container(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Card(
+                          elevation: 5,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(5)),
+                          child: Column(
+                            children: [
+                              Stack(
+                                children: <Widget>[
+                                  ClipRRect(
+                                      borderRadius: BorderRadius.circular(5.0),
+                                      child: Image(
+                                        image: AssetImage('assets/cover.jpg'),
+                                        fit: BoxFit.fill,
+                                        width: width * 0.95,
+                                        height: height * 0.25,
+                                      )),
+                                  Container(
                                     width: width * 0.95,
-                                    height: height * 0.2,
-                                    child: Image(
-                                      image: AssetImage('assets/photo/p3.jpg'),
-                                      fit: BoxFit.fill,
-                                    )),
-                                Container(
-                                  width: width * 0.95,
-                                  height: height * 0.2,
-                                  //alignment: Alignment.center,
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    height: height * 0.25,
+                                    //alignment: Alignment.center,
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Text(
+                                          'FREE NYC',
+                                          style: TextStyle(
+                                              color: Color(0xFF00ffff),
+                                              fontSize: 45,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                        Text(
+                                          'NETWORKING',
+                                          style: TextStyle(
+                                              color: Color(0xFF00ffff),
+                                              fontSize: 45,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                        Text(
+                                          'EVENT',
+                                          style: TextStyle(
+                                              color: Color(0xFF00ffff),
+                                              fontSize: 45,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                        SizedBox(
+                                          height: height * 0.05,
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                  Container(
+                                    width: width * 0.95,
+                                    height: height * 0.05,
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        SizedBox(
+                                          width: width * 0.02,
+                                        ),
+                                        Container(
+                                          alignment: Alignment.center,
+                                          height: height * 0.025,
+                                          width: width * 0.12,
+                                          color: Colors.white,
+                                          child: Text(
+                                            "3:30",
+                                            style: TextStyle(
+                                              color: Color(0xFF4CD964),
+                                              fontFamily: "JosefinSans",
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                            // textAlign: TextAlign.center,
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          width: width * 0.6,
+                                        ),
+                                        Container(
+                                          height: height * 0.025,
+                                          width: width * 0.12,
+                                          color: Colors.white,
+                                          child: Row(
+                                            children: [
+                                              Icon(
+                                                Icons.star,
+                                                color: Colors.amber.shade300,
+                                              ),
+                                              Text("4.5")
+                                            ],
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          width: width * 0.02,
+                                        ),
+                                      ],
+                                    ),
+                                  )
+                                ],
+                              ),
+                              Container(
+                                width: width * 0.95,
+                                height: height * 0.05,
+                                child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceAround,
                                     children: [
                                       Text(
-                                        'FREE NYC',
+                                        "Happy Bones",
                                         style: TextStyle(
-                                            color: Colors.blue.shade200,
-                                            fontSize: 28,
-                                            fontWeight: FontWeight.bold),
+                                            color: Color(0xFF3E3F68),
+                                            fontSize: 25,
+                                            fontWeight: FontWeight.bold,
+                                            fontFamily: "JosefinSans"),
                                       ),
-                                      Text(
-                                        'NETWORKING',
-                                        style: TextStyle(
-                                            color: Colors.blue.shade200,
-                                            fontSize: 28,
-                                            fontWeight: FontWeight.bold),
+                                      SizedBox(
+                                        width: width * 0.005,
                                       ),
-                                      Text(
-                                        'EVENT',
-                                        style: TextStyle(
-                                            color: Colors.blue.shade200,
-                                            fontSize: 28,
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                    ],
-                                  ),
-                                )
-                              ],
-                            ),
-                            Container(
-                              width: width * 0.95,
-                              height: height * 0.05,
-                              child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      "Happy Bones",
-                                      style: TextStyle(
-                                          fontSize: 22,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                    SizedBox(
-                                      width: width * 0.013,
-                                    ),
-                                    Container(
-                                      alignment: Alignment.center,
-                                      child: Text(
-                                        "Italian",
-                                      ),
-                                      height: 30,
-                                      width: 70,
-                                      decoration: BoxDecoration(
-                                        borderRadius:
-                                            BorderRadius.circular(22.0),
-                                        gradient: LinearGradient(
-                                          begin: Alignment(0.93, 0.0),
-                                          end: Alignment(-1.0, 0.0),
-                                          colors: [
-                                            const Color(0xa6ff5673),
-                                            const Color(0xa6ff8c48)
-                                          ],
-                                          stops: [0.0, 1.0],
+                                      Container(
+                                        alignment: Alignment.center,
+                                        child: Text(
+                                          "Italian",
+                                          style: TextStyle(color: Colors.white),
                                         ),
-                                        boxShadow: [
-                                          BoxShadow(
-                                            color: const Color(0x08000000),
-                                            offset: Offset(0, 10),
-                                            blurRadius: 99,
+                                        height: height * 0.025,
+                                        width: width * 0.12,
+                                        decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(22.0),
+                                          gradient: LinearGradient(
+                                            colors: [
+                                              Color(0xFFFF5673),
+                                              Color(0xFFFF8C48)
+                                            ],
+                                            //stops: [0.0, 1.0],
                                           ),
-                                        ],
+                                        ),
                                       ),
-                                    ),
-                                    SizedBox(
-                                      width: width * 0.013,
-                                    ),
-                                    Container(
-                                      alignment: Alignment.center,
-                                      child: Text("1.2km"),
-                                      height: 30,
-                                      width: 70,
-                                      decoration: BoxDecoration(
-                                        borderRadius:
-                                            BorderRadius.circular(21.0),
-                                        color: const Color(0xff848dff),
+                                      SizedBox(
+                                        width: width * 0.005,
                                       ),
-                                    ),
-                                    SizedBox(
-                                      width: width * 0.013,
-                                    ),
-                                    Container(
-                                      height: height*0.03,
-                                      width: width*0.2,
-                                      child: Image(image: AssetImage('assets/friends.png'),))
-                                  ]),
-                            ),
-                            Container(
-                              width: width * 0.95,
-                              child: Text(
-                                "394 Broome St, New York,NY 10013, USA",
-                                style: TextStyle(fontSize: 20),
+                                      Container(
+                                        alignment: Alignment.center,
+                                        child: Text(
+                                          "1.2km",
+                                          style: TextStyle(color: Colors.white),
+                                        ),
+                                        height: height * 0.025,
+                                        width: width * 0.12,
+                                        decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(21.0),
+                                          color: const Color(0xff848dff),
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        width: width * 0.005,
+                                      ),
+                                      Container(
+                                          //height: height*0.1,
+                                          width: width * 0.2,
+                                          child: Image(
+                                            image: AssetImage(
+                                                'assets/friends.png'),
+                                          ))
+                                    ]),
                               ),
-                            )
-                          ],
+                              Center(
+                                child: Container(
+                                  width: width * 0.95,
+                                  child: Text(
+                                    "394 Broome St, New York, NY 10013, USA",
+                                    style: TextStyle(
+                                        fontSize: 15, color: Color(0xFF8A98BA)),
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
                         ),
                       ),
-                    ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Card(
+                          elevation: 5,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(5)),
+                          child: Column(
+                            children: [
+                              Stack(
+                                children: <Widget>[
+                                  ClipRRect(
+                                      borderRadius: BorderRadius.circular(5.0),
+                                      child: Image(
+                                        image: AssetImage('assets/cover.jpg'),
+                                        fit: BoxFit.fill,
+                                        width: width * 0.95,
+                                        height: height * 0.25,
+                                      )),
+                                  Container(
+                                    width: width * 0.95,
+                                    height: height * 0.25,
+                                    //alignment: Alignment.center,
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Text(
+                                          'FREE NYC',
+                                          style: TextStyle(
+                                              color: Color(0xFF00ffff),
+                                              fontSize: 45,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                        Text(
+                                          'NETWORKING',
+                                          style: TextStyle(
+                                              color: Color(0xFF00ffff),
+                                              fontSize: 45,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                        Text(
+                                          'EVENT',
+                                          style: TextStyle(
+                                              color: Color(0xFF00ffff),
+                                              fontSize: 45,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                        SizedBox(
+                                          height: height * 0.05,
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                  Container(
+                                    width: width * 0.95,
+                                    height: height * 0.05,
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        SizedBox(
+                                          width: width * 0.02,
+                                        ),
+                                        Container(
+                                          alignment: Alignment.center,
+                                          height: height * 0.025,
+                                          width: width * 0.12,
+                                          color: Colors.white,
+                                          child: Text(
+                                            "3:30",
+                                            style: TextStyle(
+                                              color: Color(0xFF4CD964),
+                                              fontFamily: "JosefinSans",
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                            // textAlign: TextAlign.center,
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          width: width * 0.6,
+                                        ),
+                                        Container(
+                                          height: height * 0.025,
+                                          width: width * 0.12,
+                                          color: Colors.white,
+                                          child: Row(
+                                            children: [
+                                              Icon(
+                                                Icons.star,
+                                                color: Colors.amber.shade300,
+                                              ),
+                                              Text("4.5")
+                                            ],
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          width: width * 0.02,
+                                        ),
+                                      ],
+                                    ),
+                                  )
+                                ],
+                              ),
+                              Container(
+                                width: width * 0.95,
+                                height: height * 0.05,
+                                child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceAround,
+                                    children: [
+                                      Text(
+                                        "Happy Bones",
+                                        style: TextStyle(
+                                            color: Color(0xFF3E3F68),
+                                            fontSize: 25,
+                                            fontWeight: FontWeight.bold,
+                                            fontFamily: "JosefinSans"),
+                                      ),
+                                      SizedBox(
+                                        width: width * 0.005,
+                                      ),
+                                      Container(
+                                        alignment: Alignment.center,
+                                        child: Text(
+                                          "Italian",
+                                          style: TextStyle(color: Colors.white),
+                                        ),
+                                        height: height * 0.025,
+                                        width: width * 0.12,
+                                        decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(22.0),
+                                          gradient: LinearGradient(
+                                            colors: [
+                                              Color(0xFFFF5673),
+                                              Color(0xFFFF8C48)
+                                            ],
+                                            //stops: [0.0, 1.0],
+                                          ),
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        width: width * 0.005,
+                                      ),
+                                      Container(
+                                        alignment: Alignment.center,
+                                        child: Text(
+                                          "1.2km",
+                                          style: TextStyle(color: Colors.white),
+                                        ),
+                                        height: height * 0.025,
+                                        width: width * 0.12,
+                                        decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(21.0),
+                                          color: const Color(0xff848dff),
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        width: width * 0.005,
+                                      ),
+                                      Container(
+                                          //height: height*0.1,
+                                          width: width * 0.2,
+                                          child: Image(
+                                            image: AssetImage(
+                                                'assets/friends.png'),
+                                          ))
+                                    ]),
+                              ),
+                              Center(
+                                child: Container(
+                                  width: width * 0.95,
+                                  child: Text(
+                                    "394 Broome St, New York, NY 10013, USA",
+                                    style: TextStyle(
+                                        fontSize: 15, color: Color(0xFF8A98BA)),
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
                   ])),
             ],
           ),
-          bottomNavigationBar: Container(
+bottomNavigationBar: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(
                     topRight: Radius.circular(30),
@@ -392,7 +672,7 @@ class _TrendingState extends State<Trending> {
                 color: Colors.white,
                 boxShadow: [
                   BoxShadow(
-                      color: Colors.black38, spreadRadius: 0, blurRadius: 3),
+                      color: Color(0xFF3E3F68), spreadRadius: 0, blurRadius: 1),
                 ],
               ),
               height: height * 0.09,
@@ -404,42 +684,42 @@ class _TrendingState extends State<Trending> {
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  crossAxisAlignment: CrossAxisAlignment.center,
+                  //crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
                     IconButton(
                       iconSize: 30.0,
                       padding: const EdgeInsets.all(8.0),
                       icon: Icon(
                         Icons.home,
-                        color: Colors.deepPurpleAccent,
+                        color: Color(0xFF5663FF),
                       ),
                       onPressed: () {},
                     ),
                     IconButton(
                       iconSize: 30.0,
                       padding: const EdgeInsets.all(8.0),
-                      icon: Icon(Icons.bookmark_border_outlined),
+                      icon: Icon(Icons.bookmark_border_outlined,color: Color(0xFF6E7FAA),),
                       onPressed: () {},
                     ),
                     IconButton(
-                      iconSize: 60.0,
+                      iconSize: 65.0,
                       padding: const EdgeInsets.all(8.0),
                       icon: Icon(
                         Icons.add_circle,
-                        color: Colors.deepPurpleAccent,
+                        color: Color(0xFF5663FF),
                       ),
                       onPressed: () {},
                     ),
                     IconButton(
                       iconSize: 30.0,
                       padding: const EdgeInsets.all(8.0),
-                      icon: Icon(Icons.notifications_outlined),
+                      icon: Icon(Icons.notifications_outlined,color: Color(0xFF6E7FAA),),
                       onPressed: () {},
                     ),
                     IconButton(
                       iconSize: 30.0,
                       padding: const EdgeInsets.all(8.0),
-                      icon: Icon(Icons.person_outline),
+                      icon: Icon(Icons.person_outline,color: Color(0xFF6E7FAA),),
                       onPressed: () {},
                     )
                   ],
